@@ -2,9 +2,9 @@ from fastapi import APIRouter, Depends, Query
 from sqlmodel import Session
 from typing import List, Optional
 
-from backend.app.db.session import get_session
-from backend.app.schemas.expense import ExpenseCreate, ExpenseRead
-from backend.app.crud.expense import create_expense, get_expenses
+from app.db.session import get_session
+from app.schemas.expense import ExpenseCreate, ExpenseRead
+from app.crud.expense import create_expense, get_expenses
 
 router = APIRouter(prefix="/expenses", tags=["Expenses"])
 
