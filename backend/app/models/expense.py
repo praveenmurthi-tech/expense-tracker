@@ -1,6 +1,5 @@
 from typing import Optional
 from datetime import datetime, date as dt_date, timezone
-
 from sqlmodel import SQLModel, Field
 
 
@@ -10,7 +9,8 @@ class Expense(SQLModel, table=True):
     amount: float = Field(nullable=False)
 
     category: str = Field(nullable=False, index=True)
-    description: Optional[str] = None
+
+    description: Optional[str] = Field(default=None)
 
     date: dt_date = Field(nullable=False, index=True)
 
