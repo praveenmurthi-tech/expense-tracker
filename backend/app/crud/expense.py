@@ -1,8 +1,8 @@
 from sqlmodel import Session, select
 from typing import List, Optional
 
-from app.models.expense import Expense
-from app.schemas.expense import ExpenseCreate
+from backend.app.models.expense import Expense
+from backend.app.schemas.expense import ExpenseCreate
 
 
 def create_expense(session: Session, expense_in: ExpenseCreate) -> Expense:
